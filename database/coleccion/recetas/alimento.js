@@ -1,4 +1,4 @@
-const mongoose = require('../connect');
+const mongoose = require('../../connect');
 const Schema = mongoose.Schema;
 
 const alimentoSchema = Schema({
@@ -9,7 +9,7 @@ const alimentoSchema = Schema({
     grasas: Number,
     fibra: Number
 });
-//emmmmmmm
+
 
 
 

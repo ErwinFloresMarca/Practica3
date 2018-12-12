@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var serviceRouter = require('./routes/services');
-
+var recetasRouter = require('./routes/foods/recetas');
+var clientesRouter = require('./routes/foods/clientes');
 const port = 3000;
 var app = express();
 
@@ -26,7 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/services', serviceRouter);
-
+app.use('/api/recetas',recetasRouter);
+app.use('/api/clientes',clientesRouter);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
